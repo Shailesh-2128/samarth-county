@@ -45,10 +45,14 @@
     <!-- Favicon and Touch Icons  -->
     <!-- <link rel="shortcut icon" href="images/favicon.svg">
     <link rel="apple-touch-icon-precomposed" href="images/favicon.svg"> -->
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 
     <style>
-
+        li,p,span,div{
+             font-family: "Roboto Flex", sans-serif !important;
+        }
         @font-face {
   font-family: "helvetica";
   src: url("/font/Helvetica.ttf") format("truetype");
@@ -91,11 +95,21 @@
             overflow-x: hidden;
         }
 
-        .logo_header {
-            width: 150px;
-            background-color: black;
-            border-radius: 20px;
-        }
+       .logo_header {
+    width: 150px;
+    height: 90px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.15); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%); 
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+}
+
+
 
         h1,h2,h3,h4,h5,h6{
             font-family: "helvetica", sans-serif !important;
@@ -1199,6 +1213,94 @@
             position: absolute;
             left: -9999px;
         }
+
+        /* ================================
+   RESPONSIVE FIXES
+   ================================ */
+
+/* For tablets & medium screens */
+@media (max-width: 992px) {
+    .sc-wrap {
+        padding: 32px;
+        margin: 20px;
+    }
+
+    .sc-head h2 {
+        font-size: 28px;
+    }
+
+    .sc-head p {
+        font-size: 16px;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+
+    /* Make all fields stack */
+    .sc-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    .sc-col-2 {
+        grid-column: 1 / 1;
+    }
+
+    /* Reduce padding for mobile */
+    .sc-wrap {
+        padding: 24px;
+        margin: 16px;
+    }
+
+    .sc-head h2 {
+        font-size: 26px;
+    }
+
+    .sc-head p {
+        font-size: 15px;
+    }
+
+    /* Button & text alignment */
+    .sc-actions {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .sc-btn {
+        width: 100%;
+    }
+
+    .sc-note {
+        text-align: center;
+        width: 100%;
+        font-size: 13px;
+        margin-top: 8px;
+    }
+}
+
+/* For very small screens (like 320px) */
+@media (max-width: 480px) {
+
+    .sc-wrap {
+        padding: 18px;
+    }
+
+    /* Reduce heading size */
+    .sc-head h2 {
+        font-size: 22px;
+    }
+
+    /* Reduce input padding */
+    .sc-field input,
+    .sc-field textarea,
+    .sc-field select {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
 
         /* FAB Buttons */
         .fab-wrap {
@@ -3574,16 +3676,16 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
 
         <!-- .header -->
         <header class="header style-default header-sticky">
-            <div class="tf-container w-xxl">
+            <div class="tf-container w-xxl" style="background-color: #88878742 !important; backdrop-filter: var(--medium-gray);">
                 <div class="row">
                     <div class="col-12">
                         <div class="header-inner">
                             <a href="index.html" class="site-logo">
-                                <img class="logo_header" alt="logo" width="292" height="48" src="/assets/logo.png">
+                                <img class="logo_header" alt="logo" width="292" height="48" src="/assets/logo.svg">
                             </a>
                             <nav class="main-menu">
                                 <ul class="navigation">
-                                    <li><a href="#about" class="link-no-action">About Project</a></li>
+                                    <li><a href="#about" class="link-no-action" >About Project</a></li>
                                     <li><a href="#gallery" class="link-no-action">Gallery</a></li>
                                     <li><a href="#plan" class="link-no-action">Plan</a></li>
                                     <li><a href="#keyLocation" class="link-no-action">Key Location</a></li>
@@ -3615,12 +3717,12 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
 
         <!-- .header -->
         <header class="header style-default">
-            <div class="tf-container w-xxl">
+            <div class="tf-container w-xxl" style="background-color: #a1a1a12b !important;">
                 <div class="row">
                     <div class="col-12">
                         <div class="header-inner">
                             <a href="index.html" class="site-logo">
-                                <img class="logo_header" alt="logo" width="292" height="48" src="/assets/logo.png">
+                                <img class="logo_header" alt="logo" width="292" height="48" src="/assets/logo.svg">
                             </a>
                             <nav class="main-menu">
                                 <ul class="navigation">
@@ -3689,7 +3791,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
             <div class="tf-container w-1830">
                 <div class="content">
                     <h1 class="title split-text split-lines-rotation-x">
-                        Presenting <br> Samarth County <br>@Ravet
+                        Presenting <br> Samarth County <br>Ravet
                     </h1>
                     <div>
                         <p class="h6 text_secondary-color mb_12 split-text split-lines-transform">
@@ -4676,27 +4778,27 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                     Developer</span>
                                 <h3 class="split-text effect-blur-fade">Building Dreams, One Home At A Time</h3>
                             </div>
-                            <p class="text-body-2 split-text split-lines-transform">With 14 years of diligent
+                            <p class="text-body-2 split-text split-lines-transform" style="font-size: 15px;">With 14 years of diligent
                                 experience, delivering superior quality homes and winning heart of home buyers, <b>D. A.
                                     Borade & Son's</b> have created a name to be embraced.</p>
-                            <p class="text-body-2 split-text split-lines-transform">Credence of trust and excellence to
+                            <p class="text-body-2 split-text split-lines-transform" style="font-size: 15px;">Credence of trust and excellence to
                                 deliver. At D. A. Borade & Son's customer's delight, comfort and trust are our core
                                 values. In spite of so many players in Real Estate sector, D. A. Borade & Son's stands
                                 out to be preferred developer with its transparency and consistency to deliver its
                                 promises.</p>
-                            <p class="text-body-2 split-text split-lines-transform">With over 200+ apartments
+                            <p class="text-body-2 split-text split-lines-transform" style="font-size: 15px;">With over 200+ apartments
                                 successfully delivered to happy and satisfied home buyers at Ravet, D. A. Borade & Son's
                                 is all set to surpass many more milestones ahead. Come and join this sensational success
                                 journey!</p>
-                            <a href="#" class="tf-btn btn-bg-1 btn-px-32">
+                            <!-- <a href="#" class="tf-btn btn-bg-1 btn-px-32">
                                 <span style="color:black">View Properties</span>
                                 <span class="bg-effect"></span>
-                            </a>
+                            </a> -->
                         </div>
                         <div class="col-lg-6 offset-lg-1">
                             <div class="completed-projects mb_30">
                                 <h4 class="mb_15">Completed Projects</h4>
-                                <p class="text-body-2">We have successfully delivered quality homes to satisfied
+                                <p class="text-body-2" style="font-size: 15px;">We have successfully delivered quality homes to satisfied
                                     customers, building a legacy of trust and excellence in the real estate sector.</p>
                             </div>
                             <ul class="list">
@@ -4704,7 +4806,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                     <span class="h4 number">01.</span>
                                     <div class="content">
                                         <h5 class="mb_8">Buy A New Home</h5>
-                                        <p>Discover your dream home effortlessly. Explore diverse properties and expert
+                                        <p style="font-size: 15px;">Discover your dream home effortlessly. Explore diverse properties and expert
                                             guidance for a seamless buying experience.</p>
                                     </div>
                                 </li>
@@ -4712,7 +4814,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                     <span class="h4 number">02.</span>
                                     <div class="content">
                                         <h5 class="mb_8">Rent A Home</h5>
-                                        <p>Discover your perfect rental effortlessly. Explore a diverse variety of
+                                        <p style="font-size: 15px;">Discover your perfect rental effortlessly. Explore a diverse variety of
                                             listings tailored precisely to suit your unique lifestyle needs.</p>
                                     </div>
                                 </li>
@@ -4720,7 +4822,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                     <span class="h4 number">03.</span>
                                     <div class="content">
                                         <h5 class="mb_8">Sell A Home</h5>
-                                        <p>Sell confidently with expert guidance and effective strategies, showcasing
+                                        <p style="font-size: 15px;">Sell confidently with expert guidance and effective strategies, showcasing
                                             your property's best features for a successful sale.</p>
                                     </div>
                                 </li>
@@ -4943,20 +5045,14 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
             </div>
             <!-- End section-latest-new -->
 
+
+            <!--contact form-->
+
             <section class="sc-contact"  style='background: url("assets/background.png") no-repeat center center; 
            background-size: cover; 
            width: 100%; 
            height: 100%;'>
-                <!-- Background Reflectors -->
-                <div class="reflector reflector-1"></div>
-                <div class="reflector reflector-2"></div>
-                <div class="reflector reflector-3"></div>
-                <div class="reflector reflector-4"></div>
-
-                <!-- Gold accent lines -->
-                <div class="gold-line gold-line-1"></div>
-                <div class="gold-line gold-line-2"></div>
-
+            
                 <div class="sc-wrap">
                     <header class="sc-head">
                         <h2>Contact Samarth County</h2>
@@ -5049,7 +5145,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
         <span class="fab-label"></span>
     </a>
 
-</div>
+      </div>
 
 
 
@@ -5063,7 +5159,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                         <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                             <div class="footer-about footer-item">
                                 <a href="index.html" class="footer-logo mb-3">
-                                    <img src="images/logo/logo.png" alt="logo" class="main-logo footer-logo">
+                                    <img src="assets/logo.png" alt="logo" class="main-logo footer-logo">
                                 </a>
 
                             </div>
@@ -5094,10 +5190,11 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                         412101</p>
                                 </div>
                                 <div class="mb-3">
-                                    <a href="tel:+919145005285">
-                                        <p class="text_color-1"><strong>Support 24/7:</strong> <span
-                                                class="text_white">+91 9145005285 / 86</span></p>
-                                    </a>
+                                    
+                                        <p class="text_color-1"><strong>Support 24/7:</strong> <a href="tel:+919145005285"><span
+                                                class="text_white">+91 9145005285 /</span></a><br>
+                                                <a href="tel:+918411993985"><span class="text_white">+91 8411993985</span></a>
+                                        </p>
                                 </div>
                                 <div>
                                     <p class="text_color-1"><strong>Email:</strong> <a
@@ -5133,7 +5230,9 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                 <div class="footer-bottom d-flex align-items-center justify-content-between pt-4 mt-4 border-top">
                     <p class="text_color-1 mb-0">©2025 <a href="#" class="text_white link">Digitech Solution</a>. All
                         Rights Reserved.</p>
+                        <p class="text_color-1 mb-0">Rera No:P52100029698 MAHARASHTRA REAL ESTATE REGULATORY AUTHORIY</p>
                 </div>
+                
             </div>
         </footer>
         <!-- End Footer -->
@@ -5163,7 +5262,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
         <div class="offcanvas-header top-nav-mobile">
             <div class="offcanvas-title">
                 <a href="index.html" class="site-logo">
-                    <img src="assets/logo.png" alt="logo" class="main-logo" width="193" height="44"
+                    <img src="assets/logo.svg" alt="logo" class="main-logo" width="193" height="44"
                         data-light="assets/logo.png" data-dark="assets/logo.png">
                 </a>
             </div>
@@ -5184,9 +5283,10 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                 <div class="support">
                     <a href="#" class="text-need"> Need help?</a>
                     <ul class="mb-info">
-                        <a href="tel:+919145005285">
-                            <li>Call Us Now: <span class="number">9145005285 / 86</span></li>
-                        </a>
+                        
+                            <li><a href="tel:+919145005285">Call Us Now: <span class="number">9145005285</span> /<a href="tel:+918411993985"><span class="number">8411993985</span></a>
+                            </li>
+                        
                         <li>Support 24/7: <a href="mailto:samarthcountysales@gmail.com"
                                 class="link">samarthcountysales@gmail.com</a></li>
                         <li>
@@ -5399,110 +5499,138 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                 }
             });
         });
+
+        //form--------------------------
         document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('scForm');
-            const status = document.getElementById('scStatus');
+    const form = document.getElementById('scForm');
+    const status = document.getElementById('scStatus');
 
-            // Form validation
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
+    // ✅ Your Google Script URL (Replace this)
+    const scriptURL = "https://script.google.com/macros/s/AKfycbx8XGtzZmjNFTwRuNgyAQV4rGe79s0dV5he5hD9pzUJZnCzIbKkHKkWulm4JyppEE5J/exec";
 
-                // Reset previous errors
-                const fields = form.querySelectorAll('.sc-field');
-                fields.forEach(field => field.classList.remove('invalid'));
+    // Form validation
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-                let isValid = true;
+        // Reset previous errors
+        const fields = form.querySelectorAll('.sc-field');
+        fields.forEach(field => field.classList.remove('invalid'));
 
-                // Check required fields
-                const requiredFields = form.querySelectorAll('[required]');
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        field.closest('.sc-field').classList.add('invalid');
-                        isValid = false;
-                    }
-                });
+        let isValid = true;
 
-                // Check email format if provided
-                const emailField = document.getElementById('email');
-                if (emailField.value && !isValidEmail(emailField.value)) {
-                    emailField.closest('.sc-field').classList.add('invalid');
-                    isValid = false;
-                }
-
-                // Check phone format
-                const phoneField = document.getElementById('phone');
-                const phonePattern = /^(\+91[-\s]?)?[6-9]\d{9}$/;
-                if (phoneField.value && !phonePattern.test(phoneField.value)) {
-                    phoneField.closest('.sc-field').classList.add('invalid');
-                    isValid = false;
-                }
-
-                if (isValid) {
-                    // Show success message
-                    status.textContent = 'Some thing went wrong...';
-                    status.className = 'sc-status success';
-
-                    // Reset form
-                    form.reset();
-
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        status.textContent = '';
-                        status.className = 'sc-status';
-                    }, 5000);
-                } else {
-                    status.textContent = 'Please correct the errors above.';
-                    status.className = 'sc-status error';
-                }
-            });
-
-            // Real-time validation for fields
-            const inputs = form.querySelectorAll('input, select, textarea');
-            inputs.forEach(input => {
-                input.addEventListener('blur', function () {
-                    validateField(this);
-                });
-
-                // Add focus effect
-                input.addEventListener('focus', function () {
-                    this.parentElement.classList.add('focused');
-                });
-
-                input.addEventListener('blur', function () {
-                    this.parentElement.classList.remove('focused');
-                });
-            });
-
-            function validateField(field) {
-                const fieldContainer = field.closest('.sc-field');
-
-                if (field.hasAttribute('required') && !field.value.trim()) {
-                    fieldContainer.classList.add('invalid');
-                    return false;
-                }
-
-                if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
-                    fieldContainer.classList.add('invalid');
-                    return false;
-                }
-
-                if (field.id === 'phone' && field.value) {
-                    const phonePattern = /^(\+91[-\s]?)?[6-9]\d{9}$/;
-                    if (!phonePattern.test(field.value)) {
-                        fieldContainer.classList.add('invalid');
-                        return false;
-                    }
-                }
-
-                fieldContainer.classList.remove('invalid');
-                return true;
-            }
-
-            function isValidEmail(email) {
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailPattern.test(email);
+        // Required fields
+        const requiredFields = form.querySelectorAll('[required]');
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                field.closest('.sc-field').classList.add('invalid');
+                isValid = false;
             }
         });
+
+        // Email validation
+        const emailField = document.getElementById('email');
+        if (emailField.value && !isValidEmail(emailField.value)) {
+            emailField.closest('.sc-field').classList.add('invalid');
+            isValid = false;
+        }
+
+        // Phone validation
+        const phoneField = document.getElementById('phone');
+        const phonePattern = /^(\+91[-\s]?)?[6-9]\d{9}$/;
+        if (phoneField.value && !phonePattern.test(phoneField.value)) {
+            phoneField.closest('.sc-field').classList.add('invalid');
+            isValid = false;
+        }
+
+        // If valid → submit to Google Sheet
+        if (isValid) {
+
+            // Collect all form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                visitDate: document.getElementById('visitDate').value,
+                message: document.getElementById('message').value,
+                consent: document.getElementById('consent').checked ? "Yes" : "No"
+            };
+
+            // Send to Google Sheet
+            fetch(scriptURL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                status.textContent = "Your enquiry has been sent successfully!";
+                status.className = "sc-status success";
+                form.reset();
+
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    status.textContent = "";
+                    status.className = "sc-status";
+                }, 5000);
+            })
+            .catch(() => {
+                status.textContent = "Something went wrong. Please try again!";
+                status.className = "sc-status error";
+            });
+
+        } else {
+            status.textContent = 'Please correct the errors above.';
+            status.className = 'sc-status error';
+        }
+    });
+
+    // Real-time validation
+    const inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function () {
+            validateField(this);
+        });
+
+        input.addEventListener('focus', function () {
+            this.parentElement.classList.add('focused');
+        });
+
+        input.addEventListener('blur', function () {
+            this.parentElement.classList.remove('focused');
+        });
+    });
+
+    function validateField(field) {
+        const fieldContainer = field.closest('.sc-field');
+
+        if (field.hasAttribute('required') && !field.value.trim()) {
+            fieldContainer.classList.add('invalid');
+            return false;
+        }
+
+        if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
+            fieldContainer.classList.add('invalid');
+            return false;
+        }
+
+        if (field.id === 'phone' && field.value) {
+            const phonePattern = /^(\+91[-\s]?)?[6-9]\d{9}$/;
+            if (!phonePattern.test(field.value)) {
+                fieldContainer.classList.add('invalid');
+                return false;
+            }
+        }
+
+        fieldContainer.classList.remove('invalid');
+        return true;
+    }
+
+    function isValidEmail(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+});
+
 
         // Intersection Observer for scroll animations
         document.addEventListener('DOMContentLoaded', function () {
