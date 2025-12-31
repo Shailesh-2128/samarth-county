@@ -8,7 +8,7 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <!--[if IE ]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
-    <title>Samarth County - Real Estate HTML Template</title>
+    <title>Samarth County - Real Estate website</title>
 
     <meta name="description"
         content="Samarth County is a website specializing in buying and renting properties, connecting buyers and tenants with trusted property owners. With an easy-to-use interface and detailed information, Propty offers a fast and convenient property search experience.">
@@ -1474,12 +1474,11 @@
     }
 }
 
-    </style>    
 
 
-    <!--Commercial styling-->
-    <style>
-        .container {
+/*commercial  styling*/
+
+ .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
@@ -2109,11 +2108,8 @@
             transform: rotateX(5deg) rotateY(5deg) scale(1.02);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
-    </style>
 
-    <!--Animation css-->
-    <style>
-        .container {
+          .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
@@ -2993,11 +2989,11 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-    </style>
 
-    <!--about project css-->
-    <style>
-        .container {
+
+        /*about section*/
+
+                .container {
             max-width: 1200px;
             width: 100%;
         }
@@ -3237,12 +3233,10 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            border-radius:
             }
         }
 
-        #project-title {}
-    </style>
 
-    <!--why ravet ection css -->
-    <style>
-        .container {
+        /*why ravet */
+
+                .container {
             max-width: 1200px;
             width: 100%;
         }
@@ -3584,12 +3578,9 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                 padding: 20px;
             }
         }
-    </style>
 
-
-    <!--Aminties css-->
-    <style>
-        .amenities-grid {
+        /*aminties css*/
+                .amenities-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 24px;
@@ -3666,7 +3657,103 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
             min-height: auto;
         }
     }
-    </style>
+/* ==== POPUP MODAL BASE ==== */
+.sc-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.sc-modal.is-open {
+  display: flex;
+}
+
+.sc-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.sc-modal__dialog {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  z-index: 1;
+}
+
+/* Close button */
+.sc-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Prevent background scroll when popup is open */
+body.sc-modal-open {
+  overflow: hidden;
+}
+
+/* Optional: tighter padding inside popup */
+.sc-contact--popup .sc-wrap {
+  padding: 10px 0;
+}
+
+/* Loader Spinner Style */
+.loader-spinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.8s ease-in-out infinite;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Optional: Style for disabled button to look 'processing' */
+.sc-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important; /* Prevents hover effect while loading */
+}
+
+
+    </style>    
+
+    
+    <meta name="google-site-verification" content="v3PU2wL9aVueZhcaA9kN_3IDuuMZ169qbgDfEYVVpRY" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17771540721"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17771540721');
+</script>
+
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
 
 </head>
 
@@ -3685,12 +3772,12 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                             </a>
                             <nav class="main-menu">
                                 <ul class="navigation">
-                                    <li><a href="#about" class="link-no-action" >About Project</a></li>
-                                    <li><a href="#gallery" class="link-no-action">Gallery</a></li>
-                                    <li><a href="#plan" class="link-no-action">Plan</a></li>
-                                    <li><a href="#keyLocation" class="link-no-action">Key Location</a></li>
-                                    <li><a href="#commercial" class="link-no-action">Commercial</a></li>
-                                    <li><a href="#developer" class="link-no-action">Developer</a></li>
+                                    <li><a href="#about"  >About Project</a></li>
+                                    <li><a href="#gallery" >Gallery</a></li>
+                                    <li><a href="#plan" >Plan</a></li>
+                                    <li><a href="#keyLocation" >Key Location</a></li>
+                                    <li><a href="#commercial" >Commercial</a></li>
+                                    <li><a href="#developer" >Developer</a></li>
                                 </ul>
                             </nav>
                             <div class="header-right d-flex align-items-center gap_20">
@@ -3726,12 +3813,12 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                             </a>
                             <nav class="main-menu">
                                 <ul class="navigation">
-                                    <li><a href="#about" class="link-no-action">About Project</a></li>
-                                    <li><a href="#gallery" class="link-no-action">Gallery</a></li>
-                                    <li><a href="#plan" class="link-no-action">Plan</a></li>
-                                    <li><a href="#keyLocation" class="link-no-action">Key Location</a></li>
-                                    <li><a href="#commercial" class="link-no-action">Commercial</a></li>
-                                    <li><a href="#developer" class="link-no-action">Developer</a></li>
+                                    <li><a href="#about" >About Project</a></li>
+                                    <li><a href="#gallery">Gallery</a></li>
+                                    <li><a href="#plan">Plan</a></li>
+                                    <li><a href="#keyLocation">Key Location</a></li>
+                                    <li><a href="#commercial" >Commercial</a></li>
+                                    <li><a href="#developer">Developer</a></li>
                                 </ul>
                             </nav>
                             <div class="header-right d-flex align-items-center gap_20">
@@ -4504,7 +4591,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
 
         </div>
     </div>
-</section>
+            </section>
 
 
             <!--commercial section-->
@@ -4741,29 +4828,6 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                 </div>
             </div>
 
-            <!--locations-->
-          <!-- <section class="location-section">
-
-    <div class="container" style="color:white">
-        <div class="section-header">
-            <span class="section-subtitle animate-on-scroll">Location</span>
-            <h2 class="section-title animate-on-scroll">Prime Location</h2>
-
-            <div class="location-map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.5247367422453!2d73.73141257501658!3d18.655542382464297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb6468304a39%3A0x86bbbf1870d66e1b!2sSamarth%20County!5e1!3m2!1sen!2sus!4v1763703092974!5m2!1sen!2sus" 
-                        width="600" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
-        </div>
-    </div>
-</section> -->
-
 
 
 
@@ -4846,7 +4910,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                 <div class="card-house style-default">
                                     <div class="img-style mb_20">
                                         <img loading="lazy" decoding="async" src="assets/project1.jpg"
-                                            srcset="images/home/27.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
+                                            srcset="assets/project1.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
                                             width="410" height="308" alt="home">
                                         <div class="wrap-tag d-flex gap_8 mb_12">
                                             <div class="tag categoreis text-button-small fw-6 text_primary-color">
@@ -4861,7 +4925,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                 <div class="card-house style-default">
                                     <div class="img-style mb_20">
                                         <img loading="lazy" decoding="async" src="assets/project2.jpg"
-                                            srcset="images/home/28.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
+                                            srcset="assets/project2.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
                                             width="410" height="308" alt="home">
                                         <div class="wrap-tag d-flex gap_8 mb_12">
                                             <div class="tag categoreis text-button-small fw-6 text_primary-color">
@@ -4876,7 +4940,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                 <div class="card-house style-default">
                                     <div class="img-style mb_20">
                                         <img loading="lazy" decoding="async" src="assets/project3.jpg"
-                                            srcset="images/home/29.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
+                                            srcset="assets/project3.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
                                             width="410" height="308" alt="home">
                                         <div class="wrap-tag d-flex gap_8 mb_12">
 
@@ -4892,7 +4956,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                 <div class="card-house style-default">
                                     <div class="img-style mb_20">
                                         <img loading="lazy" decoding="async" src="assets/project4.jpg"
-                                            srcset="images/home/30.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
+                                            srcset="assets/project4.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
                                             width="410" height="308" alt="home">
                                         <div class="wrap-tag d-flex gap_8 mb_12">
                                             <div class="tag categoreis text-button-small fw-6 text_primary-color">
@@ -4906,7 +4970,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                 <div class="card-house style-default">
                                     <div class="img-style mb_20">
                                         <img loading="lazy" decoding="async" src="assets/project5.jpg"
-                                            srcset="images/home/31.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
+                                            srcset="assets/project5.jpg 410w" sizes="(max-width: 410px) 100vw, 410px"
                                             width="410" height="308" alt="home">
                                         <div class="wrap-tag d-flex gap_8 mb_12">
                                             <div class="tag categoreis text-button-small fw-6 text_primary-color">
@@ -5045,13 +5109,12 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
             </div>
             <!-- End section-latest-new -->
 
-
             <!--contact form-->
 
             <section class="sc-contact"  style='background: url("assets/background.png") no-repeat center center; 
            background-size: cover; 
            width: 100%; 
-           height: 100%;'>
+           height: 100%;' id="contact">
             
                 <div class="sc-wrap">
                     <header class="sc-head">
@@ -5104,8 +5167,13 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                             </div>
 
                             <div class="sc-actions sc-col-2">
-                                <a href="mailto:samarthcountysales@gmail.com"><button type="submit" class="sc-btn">Send
-                                        Enquiry</button></a>
+                 <a>
+  <button type="submit" class="sc-btn" onclick="gtag_report_conversion();">
+    Send Enquiry
+  </button>
+</a>
+
+
                                 <p class="sc-note">Location: Ravet, Pune </p>
                             </div>
                         </div>
@@ -5121,7 +5189,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
 
    
         <!--contact button-->
-       <div class="fab-wrap" aria-label="Quick contact">
+       <div class="fab-wrap" aria-label="Quick contact" >
 
     <!-- Call Button -->
     <a class="fab-btn fab-call" 
@@ -5151,7 +5219,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
 
 
         <!-- Footer -->
-        <footer class="footer" id="contact">
+        <footer class="footer" >
             <div class="tf-container">
                 <div class="footer-body">
                     <div class="row">
@@ -5170,12 +5238,12 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                             <div class="footer-item">
                                 <h5 class="text_white mb-3 fw-6">Quick Links</h5>
                                 <ul class="footer-menu-list list-unstyled">
-                                    <li><a href="#about" class="link-no-action text_white">About Project</a></li>
-                                    <li><a href="#gallery" class="link-no-action text_white">Gallery</a></li>
-                                    <li><a href="#plan" class="link-no-action text_white">Plan</a></li>
-                                    <li><a href="#keyLocation" class="link-no-action text_white">Key Location</a></li>
-                                    <li><a href="#developer" class="link-no-action text_white">Developer</a></li>
-                                    <li><a href="#commercial" class="link-no-action text_white">Commercial</a></li>
+                                    <li><a href="#about" class=" text_white">About Project</a></li>
+                                    <li><a href="#gallery" class=" text_white">Gallery</a></li>
+                                    <li><a href="#plan" class=" text_white">Plan</a></li>
+                                    <li><a href="#keyLocation" class=" text_white">Key Location</a></li>
+                                    <li><a href="#developer" class=" text_white">Developer</a></li>
+                                    <li><a href="#commercial" class=" text_white">Commercial</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -5191,7 +5259,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                                 </div>
                                 <div class="mb-3">
                                     
-                                        <p class="text_color-1"><strong>Support 24/7:</strong> <a href="tel:+919145005285"><span
+                                        <p class="text_color-1"><strong>Support 24/7:</strong><a href="tel:+919145005285"><span
                                                 class="text_white">+91 9145005285 /</span></a><br>
                                                 <a href="tel:+918411993985"><span class="text_white">+91 8411993985</span></a>
                                         </p>
@@ -5273,13 +5341,15 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
         <div class="offcanvas-body inner-mobile-nav">
             <div class="mb-body">
                 <ul class="navigation">
-                    <li><a href="#about" class="link-no-action">About Project</a></li>
-                    <li><a href="#gallery" class="link-no-action">Gallery</a></li>
-                    <li><a href="#plan" class="link-no-action">Plan</a></li>
-                    <li><a href="#keyLocation" class="link-no-action">Key Location</a></li>
-                    <li><a href="#developer" class="link-no-action">Developer</a></li>
-                    <li><a href="#commercial" class="link-no-action">Commercial</a></li>
-                </ul>
+    <!-- Added data-bs-dismiss="offcanvas" to each link -->
+    <li><a href="#about" data-bs-dismiss="offcanvas">About Project</a></li>
+    <li><a href="#gallery" data-bs-dismiss="offcanvas">Gallery</a></li>
+    <li><a href="#plan" data-bs-dismiss="offcanvas">Plan</a></li>
+    <li><a href="#keyLocation" data-bs-dismiss="offcanvas">Key Location</a></li>
+    <li><a href="#developer"  data-bs-dismiss="offcanvas">Developer</a></li>
+    <li><a href="#commercial"  data-bs-dismiss="offcanvas">Commercial</a></li>
+</ul>
+
                 <div class="support">
                     <a href="#" class="text-need"> Need help?</a>
                     <ul class="mb-info">
@@ -5312,9 +5382,6 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
     <!-- /mobile-nav -->
 
 
-
-
-
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
     <script src="js/svg-animation.js"></script>
@@ -5333,11 +5400,50 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/SplitText.min.js"></script>
     <script src="js/gsap.min.js"></script>
-    <script src="js/handleGsap.js"></script>
+    <script src="js/handleGsap.js"></script> 
 
+
+
+    <!-- Google Tag Manager (noscript) -->
+
+<!-- End Google Tag Manager (noscript) -->
 
     <script>
+      const exampleModal = document.getElementById('exampleModal')
+if (exampleModal) {
+  exampleModal.addEventListener('show.bs.modal', event => {
+    // Button that triggered the modal
+    const button = event.relatedTarget
+    // Extract info from data-bs-* attributes
+    const recipient = button.getAttribute('data-bs-whatever')
+    // If necessary, you could initiate an Ajax request here
+    // and then do the updating in a callback.
 
+    // Update the modal's content.
+    const modalTitle = exampleModal.querySelector('.modal-title')
+    const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+    modalTitle.textContent = `New message to ${recipient}`
+    modalBodyInput.value = recipient
+  })
+}
+
+        
+
+       //gtag_report
+   function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-17771540721/tmMzCMv8hcsbEPHhkJpC',
+    'event_callback': callback
+  });
+
+  return false;
+}
         // Intersection Observer for scroll animations
         const observerOptions = {
             threshold: 0.3,
@@ -5365,18 +5471,7 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
             map.style.transform = `translateY(${rate}px) scale(1)`;
         });
 
-        document.querySelectorAll('.navigation a[href^="#"]').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const target = document.getElementById(targetId);
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const offset = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-                    window.scrollTo({ top: offset, behavior: 'smooth' });
-                }
-            });
-        });
+       
         // Tab functionality
         document.addEventListener('DOMContentLoaded', function () {
             const tabButtons = document.querySelectorAll('.tab-btn');
@@ -5506,83 +5601,77 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
     const status = document.getElementById('scStatus');
 
     // ✅ Your Google Script URL (Replace this)
-    const scriptURL = "https://script.google.com/macros/s/AKfycbx8XGtzZmjNFTwRuNgyAQV4rGe79s0dV5he5hD9pzUJZnCzIbKkHKkWulm4JyppEE5J/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbw9kzNMtWfYC3Eh-NGavF6ToWMcTmtOQHEC92S77Xr81QdiS9To3g1rHAVaCXbXEhYM4A/exec";
 
     // Form validation
     form.addEventListener('submit', function (e) {
-        e.preventDefault();
+    e.preventDefault();
 
-        // Reset previous errors
-        const fields = form.querySelectorAll('.sc-field');
-        fields.forEach(field => field.classList.remove('invalid'));
+    // Reset previous errors
+    const fields = form.querySelectorAll('.sc-field');
+    fields.forEach(field => field.classList.remove('invalid'));
 
-        let isValid = true;
+    let isValid = true;
 
-        // Required fields
-        const requiredFields = form.querySelectorAll('[required]');
-        requiredFields.forEach(field => {
-            if (!field.value.trim()) {
-                field.closest('.sc-field').classList.add('invalid');
-                isValid = false;
-            }
-        });
-
-        // Email validation
-        const emailField = document.getElementById('email');
-        if (emailField.value && !isValidEmail(emailField.value)) {
-            emailField.closest('.sc-field').classList.add('invalid');
+    // Required fields
+    const requiredFields = form.querySelectorAll('[required]');
+    requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+            field.closest('.sc-field').classList.add('invalid');
             isValid = false;
-        }
-
-        // Phone validation
-        const phoneField = document.getElementById('phone');
-        const phonePattern = /^(\+91[-\s]?)?[6-9]\d{9}$/;
-        if (phoneField.value && !phonePattern.test(phoneField.value)) {
-            phoneField.closest('.sc-field').classList.add('invalid');
-            isValid = false;
-        }
-
-        // If valid → submit to Google Sheet
-        if (isValid) {
-
-            // Collect all form data
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                visitDate: document.getElementById('visitDate').value,
-                message: document.getElementById('message').value,
-                consent: document.getElementById('consent').checked ? "Yes" : "No"
-            };
-
-            // Send to Google Sheet
-            fetch(scriptURL, {
-                method: "POST",
-                mode: "no-cors",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData)
-            })
-            .then(() => {
-                status.textContent = "Your enquiry has been sent successfully!";
-                status.className = "sc-status success";
-                form.reset();
-
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    status.textContent = "";
-                    status.className = "sc-status";
-                }, 5000);
-            })
-            .catch(() => {
-                status.textContent = "Something went wrong. Please try again!";
-                status.className = "sc-status error";
-            });
-
-        } else {
-            status.textContent = 'Please correct the errors above.';
-            status.className = 'sc-status error';
         }
     });
+
+    // Email validation
+    const emailField = document.getElementById('email');
+    if (emailField.value && !isValidEmail(emailField.value)) {
+        emailField.closest('.sc-field').classList.add('invalid');
+        isValid = false;
+    }
+
+    // Phone validation
+    const phoneField = document.getElementById('phone');
+    const phonePattern = /^(\+91[-\s]?)?[6-9]\d{9}$/;
+    if (phoneField.value && !phonePattern.test(phoneField.value)) {
+        phoneField.closest('.sc-field').classList.add('invalid');
+        isValid = false;
+    }
+
+    // If valid → submit to Google Sheet
+    if (isValid) {
+
+        // Collect all form data
+        const formData = {
+            name: document.getElementById('name').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            visitDate: document.getElementById('visitDate').value,
+            message: document.getElementById('message').value,
+            consent: document.getElementById('consent').checked ? "Yes" : "No"
+        };
+
+        // Send to Google Sheet
+        fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        })
+        .then(() => {
+            // --- SUCCESS: REDIRECT HERE ---
+            // This replaces the status message and form reset
+            window.location.href = "thankyou-page.html"; 
+        })
+        .catch(() => {
+            status.textContent = "Something went wrong. Please try again!";
+            status.className = "sc-status error";
+        });
+
+    } else {
+        status.textContent = 'Please correct the errors above.';
+        status.className = 'sc-status error';
+    }
+});
 
     // Real-time validation
     const inputs = form.querySelectorAll('input, select, textarea');
@@ -5675,6 +5764,10 @@ background: linear-gradient(135deg, #f7cd85, #b89446);            color: white;
                 observer.observe(el);
             });
         });
+
+
+
+
     </script>
 
 

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <!--[if IE ]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
+    <title>Thank You | Samarth County</title>
+
+    <meta name="description" content="Thank you for your interest in Samarth County. Our team will contact you shortly.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Using the same font stack as your main page -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Ubuntu:wght@300;400;500;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+
+    <!-- CSS from your theme -->
+    <style>
+        /* --- GLOBAL THEME VARIABLES --- */
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F4E4A6;
+            --gold-dark: #B8941F;
+            --white: #FFFFFF;
+            --off-white: #F9F9F9;
+            --text-dark: #333333;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Font Overrides to match your theme */
+        li, p, span, div {
+            font-family: "Roboto Flex", sans-serif !important;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Helvetica", sans-serif !important;
+        }
+
+        p {
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        /* --- HEADER STYLES (Simplified for Thank You Page) --- */
+        .logo_header {
+            width: 150px;
+            height: 90px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.15); 
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            backdrop-filter: blur(15px) saturate(180%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding-top: 20px;
+        }
+
+        /* --- THANK YOU SECTION STYLES --- */
+        .thank-you-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+            position: relative;
+            padding: 120px 20px 80px; /* Top padding to account for header */
+            overflow: hidden;
+        }
+
+        /* Reusing your background animations */
+        .reflector {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0) 70%);
+            filter: blur(10px);
+            z-index: 0;
+        }
+
+        .reflector-1 { width: 300px; height: 300px; top: -100px; right: -50px; animation: float 8s ease-in-out infinite; }
+        .reflector-2 { width: 400px; height: 400px; bottom: -100px; left: -100px; animation: float 10s ease-in-out infinite reverse; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .ty-card {
+            max-width: 600px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .ty-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .check-icon-box {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(255, 255, 255, 0.5));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s backwards;
+        }
+
+        .check-icon-box i {
+            font-size: 48px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ty-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 15px;
+            font-family: "Helvetica", sans-serif;
+        }
+
+        .ty-message {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        /* Buttons matching your theme */
+        .btn-group-ty {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .ty-btn-primary {
+            padding: 14px 35px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ty-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            color: white;
+        }
+
+        .ty-btn-secondary {
+            padding: 14px 35px;
+            background: white;
+            color: #333;
+            border: 2px solid #eee;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .ty-btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold-dark);
+            background: #fffcf5;
+        }
+
+        /* Footer styling (Minified version of main footer) */
+        .footer-minimal {
+            background: #1a1a1a;
+            padding: 30px 0;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .footer-minimal a { color: #fff; text-decoration: none; }
+        .footer-minimal a:hover { color: var(--gold); }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .ty-title { font-size: 32px; }
+            .ty-card { padding: 40px 20px; }
+            .btn-group-ty { flex-direction: column; gap: 15px; }
+            .ty-btn-primary, .ty-btn-secondary { width: 100%; justify-content: center; }
+        }
+    </style>
+
+    <!-- Google Tag Manager / Analytics (Same as main page) -->
+
+
+    <!-- Event snippet for Submit lead form (5) conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-17771540721/VrbOCLuc4cwbEPHhkJpC'});
+</script>
+
+</head>
+
+<body>
+
+
+
+    <!-- Main Thank You Section -->
+    <section class="thank-you-section">
+        <!-- Background Animations -->
+        <div class="reflector reflector-1"></div>
+        <div class="reflector reflector-2"></div>
+
+        <div class="ty-card">
+            <div class="check-icon-box">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            
+            <h1 class="ty-title">Thank You!</h1>
+            
+            <p class="ty-message">
+                Your enquiry for <strong>Samarth County</strong> has been successfully received. <br>
+                Our sales team will get in touch with you shortly to assist you further.
+            </p>
+
+            <div class="btn-group-ty">
+                <a href="index.html" class="ty-btn-primary">
+                    <i class="fa-solid fa-house"></i> Back to Home
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=919145005285" target="_blank" class="ty-btn-secondary">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Auto Redirect Script (Optional - Redirects to home after 10 seconds) -->
+    <script>
+        // Uncomment the lines below if you want to auto-redirect users back to the home page
+        setTimeout(function(){
+            window.location.href = 'index.html';
+        }, 10000); // 10 seconds
+        
+    </script>
+
+</body>
+</html>
